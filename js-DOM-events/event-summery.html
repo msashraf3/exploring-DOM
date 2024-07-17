@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summery</title>
+</head>
+<body>
+    <h1>Final Summery Of DOM</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Handle event by add onclick function</button>
+    <button id="event-listener">Event Handle by addEventListen function</button>
+
+    <h3 id="form">Form of Someone</h3>
+    <input type="text" name="name" id="input-name"> <br>
+    <button id="update">Update</button>
+
+    <!-- js connection -->
+    <script>
+        //option 1
+        function handleOnClick(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'This is changed by the JS Event Handler';
+        }
+        //option 2
+        document.getElementById('event-listener').addEventListener('click', function(){
+            document.getElementById('handler-status').innerText = 'This one is changed by the Add Event Listen';
+        })
+
+        //option 2 recap
+        document.getElementById('update').addEventListener('click', function(){
+            const container = document.getElementById('input-name');
+            const container1 = container.value;
+            const h3 = document.getElementById('form');
+            h3.innerText = container1;
+            container.value = '';
+        })
+    </script>
+</body>
+</html>
