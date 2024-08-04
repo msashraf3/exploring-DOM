@@ -28,3 +28,22 @@ function triangleCalculation(){
     answer.innerText = triangleArea;
 }
 
+coloring('effect-action');
+removeColoring('effect-action');
+
+function coloring(eventColor){
+    
+    const coloring = document.getElementById(eventColor);
+    coloring.addEventListener('mouseenter', function(){
+        coloring.classList.add('hovering');
+    })
+}
+function removeColoring(eventColorRemove){
+    
+    
+    const removingColor = document.getElementById(eventColorRemove);
+    removingColor.addEventListener('mouseleave', function(){
+        removingColor.classList.remove('hovering');
+    })
+}
+

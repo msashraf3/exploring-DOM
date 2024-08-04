@@ -17,3 +17,6 @@ function rectangleCalculation(){
     const rectangleAnswer = document.getElementById('rectangle-area');
     rectangleAnswer.innerText = areaOfRectangle;
 }
+
+coloring('effect-action1');
+removeColoring('effect-action1');
